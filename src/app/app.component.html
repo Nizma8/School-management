@@ -1,3 +1,18 @@
-<app-header></app-header>
-<!-- user-requested page -->
-<router-outlet></router-outlet>
+<div class="flex w-screen">
+    <!-- Navigation (Sidebar) Section -->
+    <nav>
+      <app-layout [userRole]="role"></app-layout>
+    </nav>
+
+    <!-- Main Content Section -->
+    <main class="w-[85%]">
+      <!-- Content Section (including Sidebar Header) -->
+     
+        <app-header></app-header>
+        <router-outlet></router-outlet>
+      
+    </main>
+  </div>
+
+  
+  

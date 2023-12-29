@@ -1,21 +1,19 @@
-<!-- app-sidebar.component.html -->
-<div class="">
-    <div *ngIf="userRole === 'teacher'">
-      <!-- Admin-specific sidebar content -->
-      <mat-list>
-        <div mat-subheader>Folders</div>
-        <mat-list-item *ngFor="let folder of folders;">
-          <mat-icon matListItemIcon>folder</mat-icon>
-          <div matListItemTitle>{{folder.name}}</div>
+
+   <div class="h-screen bg-white shadow">
+      <mat-list >
+        <mat-list-item *ngFor="let section of sectionRole[userRole]" >
+          <mat-icon matListItemIcon class="">
+            <ng-icon name={{section.icons}}></ng-icon>
+          </mat-icon>
+          <div matListItemTitle class="cursor-pointer">{{ section.name }}</div>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <div mat-subheader>Notes</div>
         <mat-list-item *ngFor="let note of notes">
-          <mat-icon matListItemIcon>note</mat-icon>
-          <div matListItemTitle>{{note.name}}</div>
+          <mat-icon matListItemIcon>
+            <ng-icon name={{note.icons}}></ng-icon>
+          </mat-icon>
+          <div matListItemTitle>{{ note.name }}</div>
         </mat-list-item>
       </mat-list>
-    </div>
-  </div>
-  
-  
+   
+   </div>

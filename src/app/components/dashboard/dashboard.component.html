@@ -1,5 +1,3 @@
-<div class="w-[100%] h-[98%] flex">
-  <app-layout [userRole]="role"></app-layout>
   <div *ngIf="role === 'admin'">
     <app-homes-admin></app-homes-admin>
   </div>
@@ -10,4 +8,4 @@
   <div *ngIf="role === 'student'">
     <app-homes-student></app-homes-student>
   </div>
-</div>
+
