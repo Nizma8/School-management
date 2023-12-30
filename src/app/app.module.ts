@@ -28,10 +28,12 @@ import { HomesTeacherComponent } from './components/teachers/homes-teacher/homes
 import { HomesStudentComponent } from './components/students/homes-student/homes-student.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
 import { NgIconsModule } from '@ng-icons/core';
-import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid} from '@ng-icons/heroicons/solid'
+import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid} from '@ng-icons/heroicons/solid';
+import { StudentsFormComponent } from './components/admin/students-form/students-form.component'
 
 @NgModule({
   declarations: [
@@ -59,6 +61,7 @@ import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTa
     HomesAdminComponent,
     HomesTeacherComponent,
     HomesStudentComponent,
+    StudentsFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -67,8 +70,9 @@ import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTa
     MatIconModule,
     MatListModule,
     MatDividerModule,
-    NgIconsModule.withIcons({ heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid ,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid})
-  ],
+    NgIconsModule.withIcons({ heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid ,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid}),
+    MatButtonModule ,
+   ],
   providers: [],
   bootstrap: [AppComponent]
 })

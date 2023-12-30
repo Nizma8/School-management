@@ -1,18 +1,24 @@
 
-   <div class="h-screen bg-white shadow">
-      <mat-list >
-        <mat-list-item *ngFor="let section of sectionRole[userRole]" >
-          <mat-icon matListItemIcon class="">
+   <div class="h-screen lg:bg-white shadow-lg grid grid-cols-1 lg:rounded-none rounded-r-3xl bg-blue-200 ">
+   
+        <article class="w-full  lg:flex flex-col justify-center items-center bg-[#8ecae6] hidden  " >
+          <img src="https://uxwing.com/wp-content/themes/uxwing/download/peoples-avatars/man-person-icon.png" alt="profile" height="50px" width="50px"  style="border-radius: 50%;">
+          <h3 class="pt-1 text-white">Full Name <span class="block">UserRole</span></h3>
+          <button mat-raised-button color="warn">Update Profile</button>
+        </article>
+    <mat-list >
+      <mat-list-item *ngFor="let section of sectionRole[userRole]" class=" hover:bg-gray-300 " >
+          <mat-icon matListItemIcon >
             <ng-icon name={{section.icons}}></ng-icon>
           </mat-icon>
-          <div matListItemTitle class="cursor-pointer">{{ section.name }}</div>
+          <div matListItemTitle class="cursor-pointer hidden lg:block" ><a [routerLink]="section.path">{{ section.name }}</a></div>
         </mat-list-item>
         <mat-divider></mat-divider>
-        <mat-list-item *ngFor="let note of notes">
+        <mat-list-item *ngFor="let note of notes" class=" hover:bg-gray-300 ">
           <mat-icon matListItemIcon>
             <ng-icon name={{note.icons}}></ng-icon>
           </mat-icon>
-          <div matListItemTitle>{{ note.name }}</div>
+          <div matListItemTitle class="cursor-pointer hidden lg:block">{{ note.name }}</div>
         </mat-list-item>
       </mat-list>
    

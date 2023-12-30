@@ -3,17 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
 import { TeacherslistComponent } from 'src/app/components/admin/teacherslist/teacherslist.component';
 import { StudentslistComponent } from 'src/app/components/admin/studentslist/studentslist.component';
+import { StudentsFormComponent } from 'src/app/components/admin/students-form/students-form.component';
 
 const routes: Routes = [
   { path: '', component: AdminComponent },
   {
-    path: 'teacherslist',
+  path: 'teacherslist',
     component: TeacherslistComponent,
   },
   {
-    path: 'studentsList',
+    path: 'studentslist',
     component: StudentslistComponent,
   },
+  {
+    path:'addStudents',
+    component:StudentsFormComponent
+  }
 ];
 
 @NgModule({
