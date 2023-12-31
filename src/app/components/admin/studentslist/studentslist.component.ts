@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-studentslist',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./studentslist.component.css']
 })
 export class StudentslistComponent {
+ constructor(private homeRouter:Router){}
+ addStudents(){
+this.homeRouter.navigateByUrl('/admin/studentregistrationForm')
 
+ }
 }

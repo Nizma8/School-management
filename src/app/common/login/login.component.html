@@ -1,1 +1,74 @@
-<p>login works!</p>
+<div class="w-screen flex h-screen justify-center items-center bg">
+ <main class="w-[90%]  bg-white shadow-lg glass-container">
+   <p class="text-center pt-10 text-xl font-bold"> Choose Your Account Type </p>
+   <div class="grid grid-cols-3 gap-3 my-10 mx-3">
+    <mat-accordion>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+            Admin
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-divider></mat-divider>
+
+      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
+       
+        <app-input-field [value]="password"></app-input-field>
+
+    </div>
+    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
+
+      
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+            Teacher
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <mat-divider></mat-divider>
+      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
+       
+        <app-input-field [value]="password"></app-input-field>
+
+    </div>
+    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-accordion>
+        <mat-expansion-panel >
+          <mat-expansion-panel-header>
+            <mat-panel-title >
+            Student
+            </mat-panel-title>
+           
+          </mat-expansion-panel-header>
+          <mat-divider></mat-divider>
+      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
+       
+        <app-input-field [value]="password"></app-input-field>
+
+    </div>
+    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
+
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true"
+                             (closed)="panelOpenState = false">
+         
+        </mat-expansion-panel>
+      </mat-accordion>
+   </div>
+ </main>
+</div>

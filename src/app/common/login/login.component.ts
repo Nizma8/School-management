@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-
+  panelOpenState = false;
+  email:string="Email"
+  password:string="Password"
 }

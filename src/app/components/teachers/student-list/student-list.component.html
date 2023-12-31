@@ -1,1 +1,22 @@
-<p>student-list works!</p>
+<header class="flex items-center py-2 justify-center w-full mt-3 flex-col">
+    <!-- heading, search, button to add student -->
+    <div class="flex mx-auto items-center w-full justify-around">
+        <h2 class="text-2xl font-bold uppercase">Students</h2>
+        <div class="relative">
+            <input type="text" class="bg-gray-100 w-full py-3 rounded-xl pl-10 active:outline-blue-500 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-500 shadow" #searchInput>
+            <ng-icon name="heroMagnifyingGlassSolid" class="absolute left-3 top-3 text-lg cursor-pointer"></ng-icon>
+        </div>
+        <button mat-raised-button color="warn" (click)="addstudents()">Add Students</button>
+    </div>
+    <!-- reusable compoents -->
+   <div class=" flex justify-around w-full items-start mt-10">
+        <div class=" grid grid-cols-4 gap-3 "> <app-cards></app-cards>  
+        </div>
+        <!-- only display on onclick -->
+         <aside class="border pr-7 ">
+            <mat-card>
+                <mat-card-content>Simple card</mat-card-content>
+              </mat-card>
+         </aside>
+   </div>
+</header>

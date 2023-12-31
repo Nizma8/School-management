@@ -1,20 +1,19 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-students-form',
-  templateUrl: './students-form.component.html',
-  styleUrls: ['./students-form.component.css']
+  selector: 'app-add-students',
+  templateUrl: './add-students.component.html',
+  styleUrls: ['./add-students.component.css']
 })
-export class StudentsFormComponent {
- 
+export class AddStudentsComponent {
   name:string="Student"
   FirstName:string ="First Name"
   lastName:string ="Last Name"
-  guardian:string="Guardian"
   class:string="Class" 
   gender:string="Gender"
   dob:string="Date Of Birth"
   admno:string="Admission No"
+  subject:string="Subject"
   tym:string= "Join Date"
   email:string="string"
   adress:string="Adress"

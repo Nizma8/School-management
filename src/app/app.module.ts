@@ -19,7 +19,6 @@ import { StudentsReportCardComponent } from './components/admin/students-report-
 import { StudentListComponent } from './components/teachers/student-list/student-list.component';
 import { EventsListComponent } from './components/teachers/events-list/events-list.component';
 import { ReportCardComponent } from './components/teachers/report-card/report-card.component';
-import { RegisterComponent } from './common/register/register.component';
 import { LoginComponent } from './common/login/login.component';
 import { LogoutComponent } from './common/logout/logout.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -31,9 +30,17 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import { MatIconModule} from '@angular/material/icon';
 import {MatListModule} from '@angular/material/list';
+import {MatCardModule} from '@angular/material/card';
+import {MatExpansionModule} from '@angular/material/expansion';
 import { NgIconsModule } from '@ng-icons/core';
-import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid} from '@ng-icons/heroicons/solid';
-import { StudentsFormComponent } from './components/admin/students-form/students-form.component'
+import {heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid,heroArrowPathSolid,heroXMarkSolid} from '@ng-icons/heroicons/solid';
+import { StudentsFormComponent } from './components/admin/students-form/students-form.component';
+import { CardsComponent } from './components/cards/cards.component';
+import { FormsComponent } from './components/forms/forms.component'
+import { HttpClientModule } from '@angular/common/http';
+import { AddStudentsComponent } from './components/teachers/add-students/add-students.component';
+import { InputFieldComponent } from './common/input-field/input-field.component';
+import { TeachersFormComponent } from './components/admin/teachers-form/teachers-form.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +61,6 @@ import { StudentsFormComponent } from './components/admin/students-form/students
     StudentListComponent,
     EventsListComponent,
     ReportCardComponent,
-    RegisterComponent,
     LoginComponent,
     LogoutComponent,
     DashboardComponent,
@@ -62,6 +68,11 @@ import { StudentsFormComponent } from './components/admin/students-form/students
     HomesTeacherComponent,
     HomesStudentComponent,
     StudentsFormComponent,
+    CardsComponent,
+    FormsComponent,
+    AddStudentsComponent,
+    InputFieldComponent,
+    TeachersFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -70,8 +81,11 @@ import { StudentsFormComponent } from './components/admin/students-form/students
     MatIconModule,
     MatListModule,
     MatDividerModule,
-    NgIconsModule.withIcons({ heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid ,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid}),
+    NgIconsModule.withIcons({ heroHomeSolid,heroUsersSolid,heroBellAlertSolid,heroEnvelopeSolid,heroTableCellsSolid,heroExclamationCircleSolid,heroArrowRightOnRectangleSolid,heroBookOpenSolid,heroBuildingLibrarySolid,heroCircleStackSolid,heroCog8ToothSolid ,heroCurrencyRupeeSolid,heroAcademicCapSolid,heroMagnifyingGlassSolid,heroBars3Solid,heroArrowPathSolid,heroXMarkSolid,}),
     MatButtonModule ,
+    MatCardModule,
+    HttpClientModule,
+    MatExpansionModule
    ],
   providers: [],
   bootstrap: [AppComponent]

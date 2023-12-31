@@ -1,6 +1,6 @@
-<div class="flex w-screen">
+<div class="flex ">
     <!-- Navigation (Sidebar) Section -->
-    <nav>
+    <nav class="w-[15%]" *ngIf !="">
       <app-layout [userRole]="role"></app-layout>
     </nav>
 
@@ -8,7 +8,7 @@
     <main class="w-[85%]">
       <!-- Content Section (including Sidebar Header) -->
      
-        <app-header></app-header>
+        <app-header *ngIf !="" ></app-header>
         <router-outlet></router-outlet>
       
     </main>

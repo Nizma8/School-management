@@ -1,0 +1,15 @@
+.example-card {
+    max-width: 250px;
+  }
+  .bg{
+    background-image: url("https://i0.wp.com/www.satedev.com/wp-content/uploads/2017/07/wallpaper-sky-blue-background-13.jpg?ssl=1");
+    background-repeat: no-repeat;
+  }
+  .glass-container {
+    background: rgba(255, 255, 255, 0.1); /* Adjust the alpha value for transparency */
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px); /* Adjust the blur value */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adjust the shadow for a subtle effect */
+  }
+ 

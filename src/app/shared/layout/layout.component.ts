@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class LayoutComponent {
   @Input() userRole: string = '';
-  role:string='teachers'
+  role:string='admin'
 
   folders: Section[] = [
     {
@@ -24,7 +24,7 @@ export class LayoutComponent {
     {
       name: 'Teachers',
       icons:'heroUsersSolid',
-path:`/admin/teacherslist`
+path:`/${this.role}/teacherslist`
     },
     {
       name: 'Events',
