@@ -1,74 +1,107 @@
 <div class="w-screen flex h-screen justify-center items-center bg">
- <main class="w-[90%]  bg-white shadow-lg glass-container">
-   <p class="text-center pt-10 text-xl font-bold"> Choose Your Account Type </p>
-   <div class="grid grid-cols-3 gap-3 my-10 mx-3">
-    <mat-accordion>
-        <mat-expansion-panel >
+  <main class="w-[90%] bg-white shadow-lg glass-container">
+    <p class="text-center pt-10 text-xl font-bold">Choose Your Account Type</p>
+    <div class="grid grid-cols-3 gap-3 my-10 mx-3">
+      <mat-accordion>
+        <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title >
-            Admin
-            </mat-panel-title>
+            <mat-panel-title> Admin </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-divider></mat-divider>
 
-      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
-       
-        <app-input-field [value]="password"></app-input-field>
+          <div class="grid grid-cols-1 ml-24 gap-2">
+            <form>
+              <app-input-field
+                [value]="email"
+                [control]="Email"
+              ></app-input-field>
+              <div class="text-red-500" *ngIf="Email?.hasError('email') || (Email.touched && Email.invalid)">*Invalid Email Adress</div>
 
-    </div>
-    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
-
-      
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+              <app-input-field
+                [value]="password"
+                [control]="Password"
+              ></app-input-field>
+              <div class="text-red-500" *ngIf="Password?.hasError('pattern') || (Password
+              ?.touched && Password?.invalid)">*Invalid Password</div>  
+          <button mat-raised-button color="warn" class="mt-10 " (click)="loginAdmin()" type="button">
+            Login
+          </button>
          
+        </form>
+      </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
         </mat-expansion-panel>
       </mat-accordion>
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title >
-            Teacher
-            </mat-panel-title>
-           
+            <mat-panel-title> Teacher </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-divider></mat-divider>
-      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
-       
-        <app-input-field [value]="password"></app-input-field>
+          <div class="grid grid-cols-1 ml-24 gap-2">
+            <form >
+              <app-input-field
+                [value]="email"
+                [control]="EmailTeacher"
+              ></app-input-field>
+              <div class="text-red-500" *ngIf="EmailTeacher?.hasError('email') ||(EmailTeacher.touched && EmailTeacher.invalid) ">*Invalid Email Adress</div>
 
-    </div>
-    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
-
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+              <app-input-field
+                [value]="password"
+                [control]="PasswordTeacher"
+              ></app-input-field>
+              <div class="text-red-500" *ngIf="PasswordTeacher?.hasError('pattern') || (PasswordTeacher
+              ?.touched && PasswordStudent?.invalid)">*Invalid Password</div>  
          
+          <button mat-raised-button color="warn" class="mt-10 " (click)="loginTeacher()" type="button">
+            Login
+          </button>
+        
+        </form>
+      </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
         </mat-expansion-panel>
       </mat-accordion>
       <mat-accordion>
-        <mat-expansion-panel >
+        <mat-expansion-panel>
           <mat-expansion-panel-header>
-            <mat-panel-title >
-            Student
-            </mat-panel-title>
-           
+            <mat-panel-title> Student </mat-panel-title>
           </mat-expansion-panel-header>
           <mat-divider></mat-divider>
-      <div class="grid grid-cols-1 ml-24 gap-2">  <app-input-field [value]="email"></app-input-field>
-       
-        <app-input-field [value]="password"></app-input-field>
-
-    </div>
-    <button mat-raised-button color="warn" class="mt-10 ml-44">Login</button>
-
-        </mat-expansion-panel>
-        <mat-expansion-panel (opened)="panelOpenState = true"
-                             (closed)="panelOpenState = false">
+          <div class="grid grid-cols-1 ml-24 gap-2">
+            <form  >
+              <app-input-field 
+                [value]="email"
+                [control]="EmailStudent"
+              ></app-input-field>
+<div class="text-red-500" *ngIf="EmailStudent?.hasError('email') ||(EmailStudent.touched && EmailStudent.invalid) ">*Invalid Email Adress</div>
+              <app-input-field
+                [value]="password"
+                [control]="PasswordStudent"
+              ></app-input-field>
+    <div class="text-red-500" *ngIf="PasswordStudent?.hasError('pattern') || (PasswordStudent
+    ?.touched && PasswordStudent?.invalid)">*Invalid Password</div>  
          
+          <button mat-raised-button color="warn" class="mt-10 " type="button" (click)="loginStudent()">
+            Login
+          </button>
+        </form>
+      </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel
+          (opened)="panelOpenState = true"
+          (closed)="panelOpenState = false"
+        >
         </mat-expansion-panel>
       </mat-accordion>
-   </div>
- </main>
+    </div>
+  </main>
 </div>

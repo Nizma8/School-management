@@ -41,6 +41,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddStudentsComponent } from './components/teachers/add-students/add-students.component';
 import { InputFieldComponent } from './common/input-field/input-field.component';
 import { TeachersFormComponent } from './components/admin/teachers-form/teachers-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -85,7 +86,8 @@ import { TeachersFormComponent } from './components/admin/teachers-form/teachers
     MatButtonModule ,
     MatCardModule,
     HttpClientModule,
-    MatExpansionModule
+    MatExpansionModule,
+    ReactiveFormsModule
    ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormControl, FormControlName } from '@angular/forms';
 
 @Component({
   selector: 'app-input-field',
@@ -7,7 +8,7 @@ import { Component, Input } from '@angular/core';
 })
 export class InputFieldComponent {
   @Input() value:string = ""
-  
+  @Input() control= new FormControl('')
   
 
 }
