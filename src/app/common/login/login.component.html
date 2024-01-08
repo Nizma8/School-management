@@ -18,11 +18,11 @@
               <div class="text-red-500" *ngIf="Email?.hasError('email') || (Email.touched && Email.invalid)">*Invalid Email Adress</div>
 
               <app-input-field
-                [value]="password"
                 [control]="Password"
               ></app-input-field>
               <div class="text-red-500" *ngIf="Password?.hasError('pattern') || (Password
               ?.touched && Password?.invalid)">*Invalid Password</div>  
+              <div>{{incorrectRouteMessage}}</div>
           <button mat-raised-button color="warn" class="mt-10 " (click)="loginAdmin()" type="button">
             Login
           </button>

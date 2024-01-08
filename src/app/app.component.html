@@ -1,18 +1,17 @@
-<div class="flex ">
-    <!-- Navigation (Sidebar) Section -->
-    <nav class="w-[15%]" *ngIf !="">
-      <app-layout [userRole]="role"></app-layout>
-    </nav>
+<div class="flex">
+  <!-- Navigation (Sidebar) Section -->
+  <nav class="w-[15%]" *ngIf="role !== null">
+    <app-layout [userRole]="role"></app-layout>
+  </nav>
 
-    <!-- Main Content Section -->
-    <main class="w-[85%]">
-      <!-- Content Section (including Sidebar Header) -->
-     
-        <app-header *ngIf !="" ></app-header>
-        <router-outlet></router-outlet>
-      
-    </main>
-  </div>
+  <!-- Main Content Section -->
+  <main class="w-[85%]">
+    <!-- Content Section (including Sidebar Header) -->
+    <app-header *ngIf="role !== null"></app-header>
+    <router-outlet></router-outlet>
+  </main>
+</div>
+
 
   
   

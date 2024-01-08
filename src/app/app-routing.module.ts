@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './common/login/login.component';
 import { FormsComponent } from './components/forms/forms.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,9 @@ const routes: Routes = [
   {
     path:'add', component:FormsComponent,
     
+  },
+  {
+    path:'dashboard',component:DashboardComponent
   }
 ];
 

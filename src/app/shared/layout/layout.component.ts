@@ -1,13 +1,19 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.css'],
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit{
   @Input() userRole: string = '';
-  role:string='admin'
+  role:string | null=''
+  constructor(private auth:AuthService){}
+ngOnInit(): void {
+  this.role = this.auth.getUserRole()
+  
+}
 
   folders: Section[] = [
     {
@@ -18,7 +24,7 @@ export class LayoutComponent {
     {
       name: 'Students',
       icons:'heroUsersSolid',
-      path:`/${this.role}/studentslist`
+      path:`/admin/studentslist`
 
     },
     {
